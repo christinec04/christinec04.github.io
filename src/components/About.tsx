@@ -15,12 +15,12 @@ import {
 import { Languages, ThumbsUp } from 'lucide-react';
 import { Badge } from "@/components/ui/badge"
 
-export function About({isMobile}: { isMobile: boolean }) {
+export function About() {
     const interests = ["cosplay", "chainsaw man", "hercule poirot", "crochet", "indie games"];  
     const languages = ["English", "Mandarin Chinese"];
 
     return (
-        <Card className={`overflow-y-auto ${isMobile ? "border-0 shadow-none" : "h-[70vh]"}`}>
+        <Card className="tabCard windowSize">
             <CardHeader>
                 <CardTitle>{TABS.ABOUT}</CardTitle>
                 <div>
@@ -48,13 +48,13 @@ export function About({isMobile}: { isMobile: boolean }) {
                 <h2>Background</h2>
 
                 <h2>Stats</h2>
-                <div className="">
+                <div className="flex gap-2 ">
                     <ThumbsUp className="w-4 h-4" />
                     {interests.map((interest) => (
                         <Badge variant="outline" key={interest}>{interest}</Badge>
                     ))} 
                 </div>
-                <div>
+                <div className="flex gap-2 "> 
                     <Languages className="w-4 h-4" />
                     {languages.map((language) => (
                         <Badge variant="outline" key={language}>{language}</Badge>

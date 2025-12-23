@@ -11,10 +11,10 @@ import { Languages, ThumbsUp } from 'lucide-react';
 import { Badge } from "@/components/ui/badge"
 import { ItemImage } from "@/components/Project"
 
-export function Portfolio({isMobile}: { isMobile: boolean }) {
+export function Portfolio() {
 
     return (
-        <Card className={`overflow-y-auto ${isMobile ? "border-0 shadow-none" : ""}`}>
+        <Card className="tabCard windowSize">
             <CardHeader>
                 <CardTitle>{TABS.PORTFOLIO}</CardTitle>
             </CardHeader>

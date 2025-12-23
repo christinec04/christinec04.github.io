@@ -1,11 +1,13 @@
 import {
   Item,
+  ItemActions,
   ItemContent,
   ItemDescription,
   ItemGroup,
   ItemMedia,
   ItemTitle,
 } from "@/components/ui/item"
+import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react"
 
 const music = [
   {
@@ -30,30 +32,27 @@ const music = [
 
 export function ItemImage() {
   return (
-    <div className="flex w-full max-w-md flex-col gap-6">
+    <div className="flex w-full flex-col gap-6">
       <ItemGroup className="gap-4">
         {music.map((song) => (
           <Item key={song.title} variant="outline" asChild role="listitem">
             <a href="#">
-              <ItemMedia variant="image">
+              <ItemMedia variant="image" className="w-[210px] h-[150px]">
                 <img
-                  src={`https://avatar.vercel.sh/${song.title}`}
-                  alt={song.title}
-                  width={32}
-                  height={32}
-                  className="object-cover grayscale"
+                  src={'/public/avatar.jpg'}
+                  alt="Project"
+                  className="object-cover"
                 />
               </ItemMedia>
               <ItemContent>
-                <ItemTitle className="line-clamp-1">
-                  {song.title} -{" "}
-                  <span className="text-muted-foreground">{song.album}</span>
+                <ItemTitle>
+                  Project title
                 </ItemTitle>
-                <ItemDescription>{song.artist}</ItemDescription>
+                <ItemDescription className="line-clamp-none">Project description ajdnajk dna jknd asdja sjd nakdn adnasnda sdadnja dasda dada djadjk an djknand andjad</ItemDescription>
               </ItemContent>
-              <ItemContent className="flex-none text-center">
-                <ItemDescription>{song.duration}</ItemDescription>
-              </ItemContent>
+              <ItemActions>
+                <ExternalLinkIcon className="size-4 muted-foreground" />
+              </ItemActions>
             </a>
           </Item>
         ))}
