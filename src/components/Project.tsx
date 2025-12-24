@@ -9,46 +9,46 @@ import {
 } from "@/components/ui/item"
 import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react"
 
-const music = [
+const projects = [
   {
-    title: "Midnight City Lights",
-    artist: "Neon Dreams",
-    album: "Electric Nights",
-    duration: "3:45",
+    title: "Unboxd",
+    description: "A recommendation system for Letterboxd movies.",
+    tags: ["Python", "Flask", "Machine Learning"],
+    img: "",
   },
   {
-    title: "Coffee Shop Conversations",
-    artist: "The Morning Brew",
-    album: "Urban Stories",
-    duration: "4:05",
+    title: "BinGenius",
+    description: "",
+    tags: ["C#", "Unity", "Game Development"],
+    img: "",
   },
   {
-    title: "Digital Rain",
-    artist: "Cyber Symphony",
-    album: "Binary Beats",
-    duration: "3:30",
+    title: "LeCourse",
+    description: "",
+    tags: ["Java", "Android Development"],
+    img: "",
   },
 ]
 
-export function ItemImage() {
+export function Project() {
   return (
     <div className="flex w-full flex-col gap-6">
       <ItemGroup className="gap-4">
-        {music.map((song) => (
-          <Item key={song.title} variant="outline" asChild role="listitem">
+        {projects.map((project) => (
+          <Item key={project.title} variant="outline" asChild role="listitem">
             <a href="#">
               <ItemMedia variant="image" className="w-[210px] h-[150px]">
                 <img
-                  src={'/public/avatar.jpg'}
-                  alt="Project"
+                  src={project.img}
+                  alt={project.title}
                   className="object-cover"
                 />
               </ItemMedia>
               <ItemContent>
                 <ItemTitle>
-                  Project title
+                  {project.title}
                 </ItemTitle>
-                <ItemDescription className="line-clamp-none">Project description ajdnajk dna jknd asdja sjd nakdn adnasnda sdadnja dasda dada djadjk an djknand andjad</ItemDescription>
+                <ItemDescription className="line-clamp-none">{project.description}</ItemDescription>
               </ItemContent>
               <ItemActions>
                 <ExternalLinkIcon className="size-4 muted-foreground" />

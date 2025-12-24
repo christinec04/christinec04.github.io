@@ -61,7 +61,7 @@ export function Main() {
                         <CardHeader className="text-center sm:mb-4">
                             <h1> <span className="text-foreground">hi, </span>i'm christine!</h1>
                             <CardDescription>
-                                some witty description
+                                student, learner, developer
                             </CardDescription>
                         </CardHeader>
 

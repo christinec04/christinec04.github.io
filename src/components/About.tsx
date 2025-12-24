@@ -63,13 +63,13 @@ export function About() {
 
                 <section className="flex flex-col gap-3">
                 <h2>Stats</h2>
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                     <ThumbsUp className="size-4 mr-2" />
                     {interests.map((interest) => (
                         <Badge variant="outline" className="lowercase" key={interest}>{interest}</Badge>
                     ))} 
                 </div>
-                <div className="flex gap-2"> 
+                <div className="flex flex-wrap gap-2"> 
                     <Languages className="size-4 mr-2" />
                     {languages.map((language) => (
                         <Badge variant="outline" className="lowercase" key={language}>{language}</Badge>
