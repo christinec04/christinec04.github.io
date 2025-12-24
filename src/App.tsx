@@ -12,8 +12,6 @@ function App() {
       </div> */}
 
       <div className="fixed flex mx-auto w-screen h-screen items-center justify-center z-10">
-          
-
           {/* Main Content */}
           <Main />
         </div>
