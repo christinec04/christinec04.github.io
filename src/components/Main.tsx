@@ -29,7 +29,7 @@ import { About } from "@/components/About"
 import { Portfolio } from "@/components/Portfolio"
 import { useIsMatchMedia } from '@/hooks/use-is-match-media'
 import { useEffect, useState } from "react"
-import { ChevronsDown, User, Briefcase, Linkedin, Mail, Github } from "feather-icons-react"
+import { Minus, Minimize2, X, ChevronsDown, User, Briefcase, Linkedin, Mail, Github } from "feather-icons-react"
 
 export function Main() {
     const isSmall = useIsMatchMedia("(max-width: 640px)")
@@ -46,18 +46,23 @@ export function Main() {
 
     return (
         <div className="flex flex-col">
-            <Tabs defaultValue={TABS.HOME} value={tab} onValueChange={handleChange}>
+            <Tabs defaultValue={TABS.HOME} value={tab} onValueChange={handleChange} className="gap-0">
                 {/* Tabs */}
                 {!isSmall &&
-                    <TabsList>
+                    <TabsList className="bg-border rounded-b-none p-0 w-full">
                         {Object.values(TABS).map((tab) => (
-                            <TabsTrigger value={tab}>{tab}</TabsTrigger>
+                            <TabsTrigger value={tab} className="rounded-b-none">{tab}</TabsTrigger>
                         ))}
+                        <TabsTrigger value="decor" className="justify-end gap-3" disabled>
+                            <Minus />
+                            <Minimize2 />
+                            <X />
+                        </TabsTrigger>
                     </TabsList>}
 
                 {/* Content */}
                 <TabsContent value={TABS.HOME}>
-                    <Card className="windowSize flex flex-col justify-center">
+                    <Card className="windowSize flex flex-col justify-center sm:rounded-t-none">
                         <CardHeader className="text-center sm:mb-4">
                             <h1> <span className="text-foreground">hi, </span>i'm christine!</h1>
                             <CardDescription>

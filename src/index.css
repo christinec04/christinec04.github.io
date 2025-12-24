@@ -165,7 +165,7 @@
   @apply w-screen max-sm:border-0 max-sm:shadow-none sm:w-2xl sm:max-w-[90vw] sm:h-[70vh];
 }
 .tabCard {
-  @apply overflow-y-auto max-sm:border-0 max-sm:shadow-none;
+  @apply overflow-y-auto max-sm:border-0 max-sm:shadow-none sm:rounded-t-none;
 }
 .btn-stacked {
   @apply flex flex-col items-center gap-1 text-center size-20;
