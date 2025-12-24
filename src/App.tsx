@@ -7,9 +7,9 @@ function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       {/* Theme Toggle */}
-      <div className="fixed top-4 right-4">
+      {/* <div className="top-4 right-4">
         <ModeToggle />
-      </div>
+      </div> */}
 
       <div className="fixed flex mx-auto w-screen h-screen items-center justify-center z-10">
           

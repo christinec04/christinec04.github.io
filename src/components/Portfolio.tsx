@@ -16,7 +16,7 @@ export function Portfolio() {
     return (
         <Card className="tabCard windowSize">
             <CardHeader>
-                <CardTitle>{TABS.PORTFOLIO}</CardTitle>
+                <CardTitle className="hidden sm:inline">{TABS.PORTFOLIO}</CardTitle>
             </CardHeader>
 
             <CardContent className="grid gap-6">
