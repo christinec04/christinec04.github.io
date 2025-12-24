@@ -13,8 +13,8 @@ import { Project } from "@/components/Project"
 
 export function Portfolio() {
     const skills = {
-        "Development": ["Python", "C#", "C", "Java", "JavaScript", "HTML/CSS", "React", "Next.js", "Tailwind", "Flask", "SQL", "& more"],
-        "Tools": ["Git", "GitHub Actions", "Docker", "Azure DevOps", "Unix/Linux", "Microsoft Office", "MySQL", "SQLite",]
+        "Languages & Frameworks": ["Python", "C#", "C", "Java", "JavaScript", "HTML/CSS", "React", "Next.js", "Tailwind", "Flask", "SQL", "MySQL", "SQLite", "PostgreSQL", "SQLAlchemy"],
+        "Tools": ["Git", "GitHub Actions", "Docker", "Unix/Linux", "Azure DevOps", "Microsoft Office"]
     }
 
     return (
@@ -39,7 +39,7 @@ export function Portfolio() {
                 </section>
 
                 <section>
-                    <h2>Projects</h2>
+                    <h2 className="mb-3">Full-stack Projects</h2>
                     <Project />
                 </section>
 
@@ -47,6 +47,7 @@ export function Portfolio() {
                     <h2>Other work</h2>
                     <ul>
                         <li>This website!!</li>
+                        <li><a href="https://www.youtube.com/watch?v=r6A4q5nO0rY">The Luddy 2024 Eclipse Livestream</a></li>
                     </ul>
                 </section>
 

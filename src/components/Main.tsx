@@ -61,7 +61,7 @@ export function Main() {
                         <CardHeader className="text-center sm:mb-4">
                             <h1> <span className="text-foreground">hi, </span>i'm christine!</h1>
                             <CardDescription>
-                                student, learner, developer
+                                developer, researcher, learner
                             </CardDescription>
                         </CardHeader>
 
@@ -77,10 +77,10 @@ export function Main() {
                                         </Button>
                                     </DrawerTrigger>
                                     <DrawerContent>
-                                        <DrawerHeader className="flex flex-row justify-between items-center bg-accent-foreground rounded-t-lg">
-                                            <DrawerTitle className="text-accent">{TABS.ABOUT}</DrawerTitle>
+                                        <DrawerHeader className="flex flex-row justify-between items-center bg-primary rounded-t-lg">
+                                            <DrawerTitle className="text-primary-foreground">{TABS.ABOUT}</DrawerTitle>
                                             <DrawerClose asChild>
-                                                <Button variant="outline" size="icon" className="rounded-full"><ChevronsDown /></Button>
+                                                <Button variant="ghost" size="icon" className="rounded-full text-primary-foreground"><ChevronsDown /></Button>
                                             </DrawerClose>
                                         </DrawerHeader>
                                         <About />
@@ -96,10 +96,10 @@ export function Main() {
                                         </Button>
                                     </DrawerTrigger>
                                     <DrawerContent>
-                                        <DrawerHeader className="flex flex-row justify-between items-center bg-accent-foreground rounded-t-lg">
-                                            <DrawerTitle className="text-accent">{TABS.PORTFOLIO}</DrawerTitle>
+                                       <DrawerHeader className="flex flex-row justify-between items-center bg-primary rounded-t-lg">
+                                            <DrawerTitle className="text-primary-foreground">{TABS.PORTFOLIO}</DrawerTitle>
                                             <DrawerClose asChild>
-                                                <Button variant="outline" size="icon" className="rounded-full"><ChevronsDown /></Button>
+                                                <Button variant="ghost" size="icon" className="rounded-full text-primary-foreground"><ChevronsDown /></Button>
                                             </DrawerClose>
                                         </DrawerHeader>
                                         <Portfolio />

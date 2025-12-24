@@ -12,7 +12,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar"
-import { Heading2, Languages, ThumbsUp } from 'lucide-react';
+import { Languages, ThumbsUp } from 'lucide-react';
 import { Badge } from "@/components/ui/badge"
 
 export function About() {
@@ -34,7 +34,7 @@ export function About() {
                     <CardDescription >
                         <h1 className="inline text-2xl">Christine Chen</h1> <span>陳羿婷</span>
 
-                        <p>student, learner, developer</p>
+                        <p> developer, researcher, learner</p>
                         {/* Quick Links */}
                     </CardDescription>
                 </div>
@@ -63,17 +63,21 @@ export function About() {
 
                 <section className="flex flex-col gap-3">
                 <h2>Stats</h2>
-                <div className="flex flex-wrap gap-2">
-                    <ThumbsUp className="size-4 mr-2" />
-                    {interests.map((interest) => (
-                        <Badge variant="outline" className="lowercase" key={interest}>{interest}</Badge>
-                    ))} 
+                <div className="flex flex-row gap-4">
+                    <ThumbsUp className="size-4 text-accent-foreground"/>
+                    <div className="flex flex-wrap gap-2">
+                        {interests.map((interest) => (
+                            <Badge variant="secondary" className="lowercase" key={interest}>{interest}</Badge>
+                        ))} 
+                    </div>
                 </div>
-                <div className="flex flex-wrap gap-2"> 
-                    <Languages className="size-4 mr-2" />
-                    {languages.map((language) => (
-                        <Badge variant="outline" className="lowercase" key={language}>{language}</Badge>
-                    ))}
+                <div className="flex flex-row gap-4">
+                    <Languages className="size-4 text-accent-foreground" />
+                    <div className="flex flex-wrap gap-2"> 
+                        {languages.map((language) => (
+                            <Badge variant="secondary" className="lowercase" key={language}>{language}</Badge>
+                        ))}
+                    </div>
                 </div>
                 </section>
             </CardContent>
