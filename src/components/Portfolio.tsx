@@ -1,13 +1,10 @@
-import { Button } from "@/components/ui/button"
 import {
     Card,
     CardContent,
-    CardDescription,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
 import { TABS } from "@/constants/tabs"
-import { Languages, ThumbsUp } from 'lucide-react';
 import { Badge } from "@/components/ui/badge"
 import { Project } from "@/components/Project"
 
