@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Unboxd",
     description: "A recommendation system for Letterboxd movies using Python and FastAPI backend, and Next.js frontend. Web application coming soon.",
-    img: "/public/unboxd.png",
+    img: "/unboxd.png",
     caption: "Unboxd web application screenshot",
     links: [ 
       {
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "BinGenius",
     description: "Developed an AI-powered recycling classification system by fine-tuning PyTorch MobileNetV2, a convolutional neural network (CNN), on the Kaggle TrashNet dataset.",
-    img: "/public/bingenius.jpg",
+    img: "/bingenius.jpg",
     caption: "User interface of BinGenius app",
     links: [ 
       {
@@ -45,7 +45,7 @@ const projects = [
   {
     title: "LeCourse",
     description: "A course planning tool, integrating Googles Gemini API, that recommends academic courses with Lebron James' persona.",
-    img: "/public/lecourse.jpg",
+    img: "/lecourse.jpg",
     caption: "LeCourse interface screenshot",
     links: [ 
       {

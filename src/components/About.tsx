@@ -25,7 +25,7 @@ export function About() {
                 <div className="flex flex-row flex-wrap gap-6 items-center">
                     <Avatar className="size-25">
                         <AvatarImage
-                        src="/public/avatar.jpg"
+                        src="/avatar.jpg"
                         alt="avatar"
                         />
                         <AvatarFallback>CC</AvatarFallback>
