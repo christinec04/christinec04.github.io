@@ -32,15 +32,15 @@ import { useEffect, useState } from "react"
 import { Minus, Minimize2, X, ChevronsDown, User, Briefcase, Linkedin, Mail, Github } from "feather-icons-react"
 
 export function Main() {
-    const isSmall = useIsMatchMedia("(max-width: 640px)")
+    const isDesktop = useIsMatchMedia("(min-width: 640px)")
     const LOCKED_TAB = TABS.HOME
     const [tab, setTab] = useState(LOCKED_TAB)
 
     useEffect(() => {
-        if (isSmall) {
+        if (!isDesktop) {
             setTab(LOCKED_TAB)
         }
-    }, [isSmall])
+    }, [isDesktop])
 
     const handleChange = (value: string) => { setTab(value) }
 
@@ -48,10 +48,10 @@ export function Main() {
         <div className="flex flex-col">
             <Tabs defaultValue={TABS.HOME} value={tab} onValueChange={handleChange} className="gap-0">
                 {/* Tabs */}
-                {!isSmall &&
-                    <TabsList className="bg-border rounded-b-none p-0 w-full">
+                {isDesktop &&
+                    <TabsList className="bg-primary/75 rounded-b-none p-0 w-full">
                         {Object.values(TABS).map((tab) => (
-                            <TabsTrigger value={tab} className="rounded-b-none">{tab}</TabsTrigger>
+                            <TabsTrigger value={tab} className="rounded-b-none h-full">{tab}</TabsTrigger>
                         ))}
                         <TabsTrigger value="decor" className="justify-end gap-3" disabled>
                             <Minus />
@@ -62,7 +62,7 @@ export function Main() {
 
                 {/* Content */}
                 <TabsContent value={TABS.HOME}>
-                    <Card className="windowSize flex flex-col justify-center sm:rounded-t-none">
+                    <Card className="windowSize flex flex-col justify-center sm:rounded-t-none sm:border-t-0">
                         <CardHeader className="text-center sm:mb-4">
                             <h1> <span className="text-foreground">hi, </span>i'm christine!</h1>
                             <CardDescription>
@@ -72,7 +72,7 @@ export function Main() {
 
 
                         <CardContent className="flex flex-row flex-wrap gap-6 justify-center">
-                            {isSmall && <>
+                            {!isDesktop && <>
                                 {/* About Mobile */}
                                 <Drawer>
                                     <DrawerTrigger asChild>
