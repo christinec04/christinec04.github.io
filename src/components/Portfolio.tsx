@@ -28,7 +28,7 @@ export function Portfolio() {
                         <h2>{category}</h2>
                         <div className="flex flex-wrap gap-2">
                             {items.map((item) => (
-                                <Badge variant="outline" key={item}>{item}</Badge>
+                                <Badge variant="secondary" key={item}>{item}</Badge>
                             ))}
                         </div>
                     </div>

@@ -62,14 +62,14 @@ const projects = [
 
 export function Project() {
   return (
-    <div className="flex w-full flex-col gap-6">
+    <div className="flex flex-col gap-6">
       <ItemGroup className="gap-4">
         {projects.map((project) => (
           <Item key={project.title} variant="outline" role="listitem" className="flex flex-row flex-wrap items-start max-sm:justify-center">
               {/* Project Image */}
               <Dialog>
                 <DialogTrigger>
-                  <ItemMedia variant="image" className="w-[270px] h-[135px]">
+                  <ItemMedia variant="image" className="w-[270px] h-[135px] max-w-[calc(100vw-80px)]">
                     <img
                       src={project.img}
                       alt={project.title}
@@ -88,7 +88,7 @@ export function Project() {
               </Dialog>
 
               {/* Project Content */}
-              <ItemContent className="max-sm:min-w-sm">
+              <ItemContent className="min-w-[200px] max-w-[calc(100vw-80px)]">
                 <ItemTitle>
                   {project.title}
                 </ItemTitle>

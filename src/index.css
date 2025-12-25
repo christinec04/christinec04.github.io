@@ -148,11 +148,14 @@
     @apply mt-3 ml-6 list-disc [&>li]:mt-2;
   }
   p, li {
-    @apply text-muted-foreground text-sm;
+    @apply text-inherit text-sm;
   }
   a {
   @apply text-accent-foreground underline underline-offset-4 hover:text-accent-foreground/80;
   } 
+  section {
+    @apply text-muted-foreground;
+  }
 }
 
 @theme {
