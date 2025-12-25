@@ -84,6 +84,7 @@
   --dark-green: #376D62;
   --light-green: #EEF6F5;
   --medium-green: #488981;
+  --opposite-green: #B2D7D2;
 }
 
 .dark {
@@ -94,14 +95,14 @@
   --card-foreground: #fdfdfd;
   --popover: #2b2b2b;
   --popover-foreground: #fdfdfd;
-  --primary: #ececec;
+  --primary: var(--opposite-green);
   --primary-foreground: #2b2b2b;
-  --secondary: #2a2a27;
-  --secondary-foreground: #fdfdfd;
+  --secondary: var(--medium-green);
+  --secondary-foreground: var(--light-green);
   --muted: #2a2a27;
-  --muted-foreground: #b5b5b4;
+  --muted-foreground: #f4f4f4;
   --accent: #2a2a27;
-  --accent-foreground: #C3E1DB;
+  --accent-foreground: var(--opposite-green);
   --destructive: #e37a4a;
   --border: #ffffff1a;
   --input: #ffffff26;
